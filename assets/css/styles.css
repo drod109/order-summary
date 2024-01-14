@@ -1,0 +1,197 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Document reset */
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid lightpink; */ /* For debugging purposes */
+}
+:root {
+    /* Color scheme */
+    --clr-pale-blue: hsl(225, 100%, 94%);
+    --clr-bright-blue: hsl(245, 75%, 52%);
+    --clr-very-pale-blue: hsl(225, 100%, 98%);
+    --clr-desturated-blue: hsl(224, 23%, 55%);
+    --clr-dark-blue: hsl(223, 47%, 23%);
+
+   /* Font sizes  */
+   --fs-lg: 3rem;
+   --fs-med: 1.5rem;
+   --fs-reg: 1rem;
+   --fs-sm: 0.875rem;
+   --fs-xsm: 0.625rem;
+
+   /* Font weights */
+   --fw-med: 500;
+   --fw-bold: 700;
+   --fw-blk: 900;
+
+   /* Spacings */
+   --spacing-xlg: 3rem;
+   --spacing-lg: 2rem;
+   --spacing-med: 1.5rem;
+   --spacing-sm: 0.5rem;
+
+   /* Border radius' */
+   --border-radius-lg: 2rem;
+   --border-radius-med: 1.5rem;
+   --border-radius-sm: 1rem;
+   --border-radius-xsm: 0.5rem;
+}
+html {
+  font-family: "Red Hat", sans-serif, system-ui;
+  font-size: 16px; 
+}
+body {
+  background-color: var(--clr-pale-blue);
+  background-image: url('../images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top center; 
+  background-size: 100% auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw; 
+  width: 100svw; 
+  height: 100vh; 
+  height: 100svh; 
+  overflow: hidden; 
+  }
+
+/* Order Card Styles */
+.order-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: var(--clr-dark-blue);
+  max-width: 25rem;
+  text-align: center;
+  border-radius: var(--border-radius-sm);
+}
+.order-header {
+  font-weight: var(--fw-bold);
+}
+.order-message {
+  color: var(--clr-desturated-blue);
+}
+.order-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--spacing-med);
+  padding: var(--spacing-med);
+
+}
+.order-hero {
+  border-top-right-radius: var(--border-radius-sm);
+  border-top-left-radius: var(--border-radius-sm);
+  max-width: 25rem;
+}
+.order-details {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: var(--clr-very-pale-blue);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-sm);
+  width: 90%;
+}
+.order-type {
+  display: flex;
+  align-items: center;
+  width: 100%; 
+  gap: var(--spacing-sm);
+}
+.plan-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-xsm);
+}
+.change-link {
+  margin-left: auto; 
+}
+.plan-type span {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-reg);
+  color: var(--clr-desturated-blue);
+  padding: var(--spacing-xsm) 0;
+}
+.change-link {
+  color: var(--clr-bright-blue);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  padding: 0 var(--spacing-sm);
+  text-decoration: none;
+}
+.change-link:hover {
+  text-decoration: underline;
+}
+.buttons {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  width: 90%;
+}
+.btn {
+  all: unset;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: var(--border-radius-xsm);
+  cursor: pointer;
+  height: 2.5rem;
+  width: 100%;
+}
+.btn-primary {
+  background-color: var(--clr-bright-blue);
+  color: white;
+  font-size: 0.9375rem; 
+  font-weight: var(--fw-bold);
+  transition: background-color 0.5s ease;
+  transition: box-shadow 0.5s ease;
+}
+.btn-primary:hover {
+  background-color: hsl(245, 58%, 66%);
+  box-shadow: 0 0.5rem 0.5rem -0.125rem hsla(245, 58%, 66%, 0.5);
+}
+.btn-cancel {
+  color: var(--clr-desturated-blue);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  transition: color 0.5s ease;
+}
+.btn-cancel:hover {
+  color: var(--clr-dark-blue);
+}
+.author {
+  position: relative;
+  color: var(--clr-desturated-blue);
+  margin: var(--spacing-xsm);
+  position: relative;
+  font-size: 0.795rem;
+}
+.author a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.5s ease;
+}
+.author a:hover {
+  color: hsl(245, 58%, 66%);
+}
+/* Media Query for background image change */
+@media (max-width: 31.25rem) {
+    body {
+      background-image: url('../images/pattern-background-mobile.svg');
+      background-size: 100% auto; 
+      background-position: top center; 
+    }
+  }
