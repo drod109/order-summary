@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL Primary: [Live Site Preview](https://drod109.github.io/)
+- Live Site URL Primary: [Live Site Preview](https://drod109.github.io/order-summary/)
 - Live Site URL Backup: [Live Site Preview](https://codepen.io/drodrigues/full/WNmoqRa/)
 
 ## My process
